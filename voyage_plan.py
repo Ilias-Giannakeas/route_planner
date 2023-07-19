@@ -336,9 +336,6 @@ def A_star_Simple(Start_LAT, Start_LON, End_LAT, End_LON, Nodes, Connectivity):
     reconst_path : list. sequence of nodes ids to reach the end location
     Nodes_Path : dataframe. columns:LAT, LON, Dimensions: [n1 x 2], n1 is the number of nodes in the path
     
-    Credits
-    ------------
-    The A* algorithm is based on https://stackabuse.com/courses/graphs-in-python-theory-and-implementation/lessons/a-star-search-algorithm/
     
     """
     
@@ -484,8 +481,6 @@ def A_star_Simple(Start_LAT, Start_LON, End_LAT, End_LON, Nodes, Connectivity):
 
 #         Compute Voyage Metrics
 # --------------------------------
-
-
 def get_Voyage_Metrics(Nodes_Path, dict_Parameters):
     """
     Parameters
@@ -539,7 +534,6 @@ def get_Voyage_Metrics(Nodes_Path, dict_Parameters):
 #                Master Function
 # --------------------------------------------------
 # --------------------------------------------------
-
 def main_voyage_planner(Start_LAT, Start_LON, End_LAT, End_LON, Nodes, Connectivity, dict_Parameters ):
     '''
     This function takes all the inputs and returs 3 list that contain all information necessary for the shortest path. 

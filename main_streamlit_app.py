@@ -13,7 +13,7 @@ import pandas as pd
 import csv
 import folium
 from streamlit_folium import st_folium
-import voyage_plan_simple
+import voyage_plan
 
 # cd C:\Users\ggFri\Desktop\Streamlit-VoyagePlan
 # streamlit run main_streamlit_app.py
@@ -161,7 +161,7 @@ def do_compute_route():
     Coords = np.vstack((Nodes['LAT'].values,Nodes['LON'].values)).T
     
     # Compute the Path
-    reconst_path, Nodes_Path = voyage_plan_simple.A_star_Simple(st.session_state.Start_LAT, st.session_state.Start_LON, 
+    reconst_path, Nodes_Path = voyage_plan.A_star_Simple(st.session_state.Start_LAT, st.session_state.Start_LON, 
                                                                 st.session_state.End_LAT, st.session_state.End_LON,
                                                                 Nodes, Connectivity)
     
@@ -329,7 +329,7 @@ Compute_Route = st.button('Compute Route', key='but_compute_route', on_click=do_
 
 if st.session_state.route_computed:
     # Compute the KPIs
-    dict_Voyage_metrics = voyage_plan_simple.get_Voyage_Metrics(st.session_state.Nodes_Path.values, st.session_state.dict_Parameters)
+    dict_Voyage_metrics = voyage_plan.get_Voyage_Metrics(st.session_state.Nodes_Path.values, st.session_state.dict_Parameters)
     
     st.session_state.Distance_km = dict_Voyage_metrics['Distance_km']
     st.session_state.Time_h = dict_Voyage_metrics['Time_h']
