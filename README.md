@@ -20,7 +20,7 @@ pip install -r requirements.txt
 ## Use
 In the script voyage_plan.py, an example is already included. 
 
-The possible movement of the vessel is defined in the files Data\Nodes.csv and Data\Connectivity.csv. The first contains the coordinates (Lat, Lon) of a grid of points while the second describes how the grid points are connected with one another. Bot the grid and the connectivity between all points has been defined in such a way that major land masses are avoided.  
+The possible movement of the vessel is defined in the files Data\Nodes.csv and Data\Connectivity.csv. The first contains the coordinates (Lat, Lon) of a grid of points while the second describes how the grid points are connected with one another. Both the grid and the connectivity between all points has been defined in such a way that major land masses are avoided.  
 
 When specifying starting and end coordinates, the algorithm will search for the closest point in the available grid and pick that as the start/end.
 
